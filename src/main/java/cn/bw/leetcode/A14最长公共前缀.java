@@ -20,9 +20,23 @@ package cn.bw.leetcode;
  */
 public class A14最长公共前缀 {
 
+    /***
+     * @beat 99%
+     * @param strs
+     * @return
+     */
     public String longestCommonPrefix(String[] strs){
+        String prefix="";
+        int len = strs.length;
+        if(len>0){
+            prefix = strs[0];
+        }
+        for(int i=0;i<len;i++){
+            while (!strs[i].startsWith(prefix)){
+                prefix = prefix.substring(0,prefix.length()-1);
+            }
+        }
 
-
-        return "";
+        return prefix;
     }
 }
