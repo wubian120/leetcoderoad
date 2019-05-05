@@ -32,11 +32,11 @@ public class A2两数相加 {
         while (l1 != null || l2 != null) {
 
             int v1 = (l1 == null ? 0 : l1.val);
-            int v2 = (l1 == null ? 0 : l2.val);
+            int v2 = (l2 == null ? 0 : l2.val);
 
             current.next = new ListNode((sum+v1+v2) % 10);
             current = current.next;
-            sum = (v1+v2) / 10;
+            sum = (v1+v2+sum) / 10;
 
             if(l1!=null){
                 l1 = l1.next;
