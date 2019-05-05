@@ -1,5 +1,8 @@
 package cn.bw.leetcode;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * @description: 3. 无重复字符串的最长子串
  *
@@ -27,7 +30,18 @@ public class A3无重复字符的最长子串 {
 
     public int lengthOfLongestSubstring(String s){
 
-        int result = 0;
+        int result = 0, front=0, current=0, len = s.length();
+        Set<Character> charSet = new HashSet<>();
+        while (front<len && current<len){
+
+            if(!charSet.contains(s.charAt(current))){
+                charSet.add(s.charAt(current++));
+                result = Math.max(result, current-front);
+            }else {
+                charSet.remove(front++);
+            }
+        }
+
 
 
 
