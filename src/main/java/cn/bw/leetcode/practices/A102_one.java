@@ -36,7 +36,7 @@ public class A102_one {
             results.add(new ArrayList<>());
         }
         results.get(dept).add(root.val);
-        
+
         handleLevelOrder(root.left, results, dept + 1);
 
         handleLevelOrder(root.right, results, dept + 1);
