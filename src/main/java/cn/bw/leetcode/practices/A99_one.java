@@ -17,8 +17,36 @@ public class A99_one {
         }
     }
 
-    public void recoverTree(TreeNode root){
+    TreeNode pre = new TreeNode(Integer.MIN_VALUE), fst = null, snd = null;
 
+    public void recoverTree(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        inorderTraverse(root);
+        swap(fst, snd);
+    }
+
+    private void inorderTraverse(TreeNode root) {
+        if (root == null) return;
+
+        inorderTraverse(root.left);
+        if (fst == null && pre.val > root.val) {
+            fst = pre;
+        }
+        if (fst != null && pre.val > root.val) {
+            snd = root;
+        }
+        pre = root;
+        inorderTraverse(root.right);
+    }
+
+    private void swap(TreeNode fst, TreeNode snd) {
+        if (fst != null && snd != null) {
+            int tmp = fst.val;
+            fst.val = snd.val;
+            snd.val = tmp;
+        }
     }
 
 }
