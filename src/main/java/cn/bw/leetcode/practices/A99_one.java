@@ -36,6 +36,8 @@ public class A99_one {
         }
         if (fst != null && pre.val > root.val) {
             snd = root;
+
+            
         }
         pre = root;
         inorderTraverse(root.right);
