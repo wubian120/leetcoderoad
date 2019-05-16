@@ -29,7 +29,7 @@ public class A109_one {
     public TreeNode sortedListToBST(ListNode head){
         if(head == null) return null;
 
-        
+
         return createTree(head,null);
     }
 
