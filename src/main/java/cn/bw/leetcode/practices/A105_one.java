@@ -5,6 +5,7 @@ package cn.bw.leetcode.practices;
  * @auther: bian.wu
  * @date: 2019/5/15 23:09
  */
+
 public class A105_one {
 
     public class TreeNode {
@@ -16,6 +17,7 @@ public class A105_one {
             val = x;
         }
     }
+
 
     int index = 0;
 
