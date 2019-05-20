@@ -5,11 +5,11 @@ import java.util.List;
 import java.util.Stack;
 
 /**
- * @description: 144 二叉树的前序遍历
+ * @description:
  * @auther: bian.wu
- * @date: 2019/5/19 07:56
+ * @date: 2019/5/19 09:13
  */
-public class A144_one {
+public class A94二叉树的中序遍历two {
     public  class TreeNode {
         public int val;
         public TreeNode left;
@@ -19,43 +19,26 @@ public class A144_one {
         }
     }
 
-
-    public List<Integer> preorderTraversal(TreeNode root){
+    public List<Integer> inorderTraversal(TreeNode root){
         List<Integer> results = new LinkedList<>();
-
         Stack<TreeNode> nodeStack = new Stack<>();
-        while (root!=null || !nodeStack.isEmpty()){
 
-            while (root!= null){
-                results.add(root.val);
+        while (root!=null || !nodeStack.isEmpty()) {
+
+            while (root!=null){
                 nodeStack.push(root);
                 root = root.left;
             }
+
             if(!nodeStack.isEmpty()){
                 root = nodeStack.pop();
+                results.add(root.val);
                 root = root.right;
             }
+
         }
         return results;
-
-
     }
-
-    List<Integer> results = new LinkedList<>();
-    public List<Integer> preorderTraversalRecur(TreeNode root){
-
-        if(root == null){
-            return results;
-        }
-        results.add(root.val);
-        preorderTraversalRecur(root.left);
-        preorderTraversalRecur(root.right);
-        return results;
-    }
-
-
-
-
 
 
 
