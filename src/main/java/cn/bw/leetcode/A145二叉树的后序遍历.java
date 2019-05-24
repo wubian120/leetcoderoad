@@ -28,14 +28,13 @@ public class A145二叉树的后序遍历 {
         if(root==null){
             return results;
         }
+
         Stack<TreeNode> nodeStack = new Stack<>();
-
         nodeStack.push(root);
-        while (!nodeStack.isEmpty()){
 
+        while (!nodeStack.isEmpty()){
             root = nodeStack.pop();
             //从前往后放 ， 先放root, 然后 root.right, 然后root.left;
-
             results.add(0,root.val);
             if(root.left!=null){
                 //stack 先压left,
@@ -45,7 +44,6 @@ public class A145二叉树的后序遍历 {
                 //stack 后压right，
                 nodeStack.push(root.right);
             }
-
         }
         return results;
     }

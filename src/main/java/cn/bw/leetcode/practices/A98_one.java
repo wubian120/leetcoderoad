@@ -16,17 +16,22 @@ public class A98_one {
             val = x;
         }
     }
-    public boolean isValidBST(TreeNode root){
-        return isValid(root,Long.MIN_VALUE,Long.MAX_VALUE);
+
+    public boolean isValidBST(TreeNode root) {
+        return isValid(root, Long.MIN_VALUE, Long.MAX_VALUE);
 
     }
 
-    private boolean isValid(TreeNode root, Long left, Long right){
+    private boolean isValid(TreeNode root, Long left, Long right) {
 
-        if(root == null){ return true;}
+        if (root == null) {
+            return true;
+        }
 
-        if(root.val <= left || root.val>=right) {return false;}
-
-        return isValid(root.left,left,(long)root.val) && isValid(root.right,(long)root.val, right);
+        if (root.val <= left || root.val >= right) {
+            return false;
+        }
+        //tricky part
+        return isValid(root.left, left, (long) root.val) && isValid(root.right, (long) root.val, right);
     }
 }
