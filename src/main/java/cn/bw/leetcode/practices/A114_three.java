@@ -13,7 +13,7 @@ public class A114_three {
     }
 
     public void flatten(TreeNode root){
-
+        findNext(root);
     }
 
     private TreeNode findNext(TreeNode root){
