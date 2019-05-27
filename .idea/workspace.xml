@@ -61,11 +61,29 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="A105_two.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="A105_two.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/cn/bw/leetcode/practices/A105_two.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="406">
                   <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="A96不同的二叉搜索树.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/bw/leetcode/A96不同的二叉搜索树.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="371">
+                  <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="A96_one.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/bw/leetcode/practices/A96_one.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="288">
+                  <caret line="16" column="5" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="16" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
@@ -109,6 +127,7 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/bw/leetcode/practices/hellotest.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/bw/leetcode/practices/A105_one.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/bw/leetcode/practices/A105_two.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/bw/leetcode/practices/A96_one.java" />
       </list>
     </option>
   </component>
@@ -262,7 +281,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2236000" />
+    <option name="totallyTimeSpent" value="2690000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="21" y="57" width="1400" height="757" extended-state="0" />
@@ -282,7 +301,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3378788" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.26141384" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26141384" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -488,6 +507,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
           <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/bw/leetcode/A96不同的二叉搜索树.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/bw/leetcode/practices/A96_one.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="16" selection-end-column="5" />
         </state>
       </provider>
     </entry>
