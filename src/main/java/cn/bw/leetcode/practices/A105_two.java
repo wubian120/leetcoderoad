@@ -1,12 +1,6 @@
 package cn.bw.leetcode.practices;
 
-/**
- * @description: 105 从前序和中序遍历序列构造二叉树
- * @auther: bian.wu
- * @date: 2019/5/15 23:09
- */
-
-public class A105_one {
+public class A105_two {
 
     public class TreeNode {
         int val;
@@ -18,20 +12,19 @@ public class A105_one {
         }
     }
 
-
-    int index = 0;
-
     public TreeNode buildTree(int[] preorder, int[] inorder) {
 
         return build(preorder,inorder,0,inorder.length-1);
     }
 
+    int index = 0;
+
     private int search(int[] inorder, int start, int end, int data) {
+
         for (int i = end; i >= start; i--) {
             if (inorder[i] == data) {
                 return i;
             }
-
         }
         return -1;
     }
@@ -42,13 +35,11 @@ public class A105_one {
         }
 
         int j = search(inorder, left, right, preorder[index]);
-        TreeNode node = new TreeNode(preorder[index]);
+        TreeNode root = new TreeNode(preorder[index]);
         index++;
-        node.left = build(preorder, inorder, left, j - 1);
-        node.right = build(preorder, inorder, j + 1, right);
-
-        return node;
-
+        root.left = build(preorder, inorder, left, j - 1);
+        root.right = build(preorder, inorder, j + 1, right);
+        return root;
     }
 
 }
