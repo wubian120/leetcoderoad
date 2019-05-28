@@ -7,9 +7,15 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
+
 **/.idea/
-.settings/
-.idea/
+.idea/*
+.idea
+
+.settings
+/*/.settings
+/*/.settings/*
+
 **/*.iml
 
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
