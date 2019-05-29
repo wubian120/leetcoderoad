@@ -16,17 +16,22 @@ public class A86分隔链表S {
         }
     }
 
+    /**
+     * 两个指针，  一个 小于 x, 一个大于 x。
+     * @param head
+     * @param x
+     * @return
+     */
     public ListNode partition(ListNode head , int x){
         if(head ==null || head.next == null){
-            return null;
+            return head;
         }
-
         ListNode beforeHead = new ListNode(0), before = beforeHead;
         ListNode afterHead = new ListNode(1), after = afterHead;
 
         while (head != null){
 
-            if(head.val > x){
+            if(head.val >= x){
                 after.next = head;
                 head = head.next;
                 after = after.next;
@@ -40,9 +45,10 @@ public class A86分隔链表S {
             }
 
         }
+         // 前后两个链表 连起来 。
         before.next = afterHead.next;
         return beforeHead.next;
-        
+
     }
 
 }
