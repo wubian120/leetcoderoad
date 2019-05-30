@@ -7,9 +7,9 @@ import java.util.List;
 /**
  * @description:
  * @auther: bian.wu
- * @date: 2019/5/13 23:25
+ * @date: 2019/5/30 20:26
  */
-public class A102_two {
+public class A102二叉树的层次遍历 {
 
     public class TreeNode {
         int val;
@@ -24,22 +24,25 @@ public class A102_two {
     public List<List<Integer>> levelOrder(TreeNode root) {
 
         List<List<Integer>> results = new ArrayList<>();
-        handleLevelOrder(root,results,0);
+
+        level(root,0,results);
         return results;
     }
 
-    public void handleLevelOrder(TreeNode root, List<List<Integer>> results, int dept) {
+    private void level(TreeNode root, int dept, List<List<Integer>> results) {
         if (root == null) {
             return;
         }
+
+        // 注意 >= 
         if (dept >= results.size()) {
             results.add(new LinkedList<>());
         }
         results.get(dept).add(root.val);
 
-        handleLevelOrder(root.left, results, dept + 1);
-
-        handleLevelOrder(root.right, results, dept + 1);
+        level(root.left, dept + 1, results);
+        level(root.right, dept + 1, results);
 
     }
+
 }
