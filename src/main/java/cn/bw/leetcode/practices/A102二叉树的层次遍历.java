@@ -34,7 +34,7 @@ public class A102二叉树的层次遍历 {
             return;
         }
 
-        // 注意 >= 
+        // 注意 >=
         if (dept >= results.size()) {
             results.add(new LinkedList<>());
         }
