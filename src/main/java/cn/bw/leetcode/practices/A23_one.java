@@ -1,11 +1,13 @@
-package cn.bw.leetcode;
+package cn.bw.leetcode.practices;
+
+import cn.bw.leetcode.A23合并K个排序链表;
 
 /**
  * @description:
  * @auther: bian.wu
- * @date: 2019/4/24 15:21
+ * @date: 2019/6/1 12:30
  */
-public class A23合并K个排序链表 {
+public class A23_one {
 
     public class ListNode {
         int val;
@@ -18,22 +20,22 @@ public class A23合并K个排序链表 {
 
     public ListNode mergeKLists(ListNode[] lists) {
 
-        if (lists.length > 0) {
-            return mergeSort(lists, 0, lists.length - 1);
-        } else {
+        int len = lists.length;
+        if(len>0){
+            return mergeSort(lists,0,len-1);
+        }else {
             return null;
         }
-
     }
-
 
     private ListNode mergeSort(ListNode[] lists, int low, int high) {
         if (low < high) {
-
             int mid = low + (high - low) / 2;
+
             ListNode leftList = mergeSort(lists, low, mid);
             ListNode rightList = mergeSort(lists, mid + 1, high);
-            return mergeTwoList(leftList, rightList);
+
+            return mergeTwoLists(leftList, rightList);
 
         } else if (low == high) {
             return lists[low];
@@ -42,31 +44,37 @@ public class A23合并K个排序链表 {
         }
     }
 
-    private ListNode mergeTwoList(ListNode l1, ListNode l2) {
-        ListNode ahead = new ListNode(0);
-        ListNode current = ahead;
+    private ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+
+        ListNode beforeHead = new ListNode(0);
+        ListNode current = beforeHead;
+
         while (l1 != null && l2 != null) {
-            if (l1.val < l2.val) {
+
+            if(l1.val<l2.val){
                 current.next = new ListNode(l1.val);
+                current = current.next;
                 l1 = l1.next;
-            } else {
+            }else {
                 current.next = new ListNode(l2.val);
+                current = current.next;
                 l2 = l2.next;
             }
-            current = current.next;
+
         }
 
-        while (l1 != null) {
+        while (l1 !=null){
             current.next = new ListNode(l1.val);
-            l1 = l1.next;
             current = current.next;
+            l1 = l1.next;
         }
 
-        while (l2 != null) {
+        while (l2 !=null){
             current.next = new ListNode(l2.val);
-            l2 = l2.next;
             current = current.next;
+            l2 = l2.next;
         }
-        return ahead.next;
+        return beforeHead.next;
     }
+
 }
