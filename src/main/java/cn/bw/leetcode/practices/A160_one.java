@@ -1,0 +1,34 @@
+package cn.bw.leetcode.practices;
+
+import cn.bw.leetcode.A160相交链表;
+
+public class A160_one {
+
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+            next = null;
+        }
+    }
+
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+
+
+        if (headA == null || headB == null) {
+            return null;
+        }
+
+        ListNode a = headA, b = headB;
+
+        while (a != b) {
+            a = (a == null ? headB : a.next);
+            b = (b == null ? headA : b.next);
+        }
+        return a;
+    }
+
+
+}
