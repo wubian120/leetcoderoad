@@ -19,6 +19,7 @@ public class A1两数之和 {
     public int[] twoSum(int[] nums, int target){
         int len = nums.length;
         Map<Integer,Integer> numMap = new HashMap<>();
+        //数组中的数都放入 map中
         for(int i=0;i<len;i++){
             numMap.put(nums[i],i);
         }
