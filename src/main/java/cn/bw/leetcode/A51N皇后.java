@@ -27,7 +27,7 @@ public class A51N皇后 {
 
         if(pos == queen.length){
             List<String> cur = new LinkedList<>();
-            
+
         }
 
     }
