@@ -18,36 +18,35 @@ public class A51N皇后 {
         List<List<String>> results = new LinkedList<>();
         int[] queen = new int[n];
 
-        backTrack(queen,results,0);
+        backTrack(queen, results, 0);
 
         return results;
 
     }
 
     /**
-     *
      * @param q
      * @param results
-     * @param pos  行
+     * @param pos     行
      */
-    private  void backTrack(int[] q, List<List<String>> results, int pos) {
+    private void backTrack(int[] q, List<List<String>> results, int pos) {
 
         //当前已经到最后一行了 ？
-        if(pos == q.length){
+        if (pos == q.length) {
             List<String> cur = new ArrayList<>();
-            for(int i=0;i<q.length;i++){
+            for (int i = 0; i < q.length; i++) {
                 StringBuilder builder = addPoints(q.length);
-                builder.setCharAt(q[i],'Q');
+                builder.setCharAt(q[i], 'Q');
                 cur.add(builder.toString());
             }
             results.add(cur);
             return;
         }
 
-        for(int i=0;i<q.length;i++){
+        for (int i = 0; i < q.length; i++) {
             q[pos] = i;
-            if(isValid(q,pos)){
-                backTrack(q,results,pos+1);
+            if (isValid(q, pos)) {
+                backTrack(q, results, pos + 1);
             }
         }
     }

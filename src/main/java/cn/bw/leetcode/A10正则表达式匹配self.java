@@ -67,8 +67,12 @@ public class A10正则表达式匹配self {
         boolean firstMatch = (!s.isEmpty() && (p.charAt(0) == s.charAt(0) || p.charAt(0) == '.'));
 
         if (p.length() >= 2 && p.charAt(1) == '*') {
+            //两种情况均可， 第一种， 判断s 与 p.substring(2)后序子串是否匹配，
+            //第二种 firstMatch 且 s.substring(1)与 p 是否匹配。
             return (isMatch(s, p.substring(2)) || firstMatch && isMatch(s.substring(1), p));
         }else {
+            // p.len >=2  but p.charAt(1) != '*'
+            //注意 firstMatch 需要在前
             return  firstMatch && isMatch(s.substring(1),p.substring(1));
         }
 
