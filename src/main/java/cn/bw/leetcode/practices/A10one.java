@@ -11,6 +11,7 @@ public class A10one {
             return s.isEmpty();
         }
         boolean fstMatch = (!s.isEmpty() && (p.charAt(0) == s.charAt(0) || p.charAt(0) == '.'));
+
         if (p.length() >= 2 && p.charAt(1) == '*') {
             return (isMatch(s, p.substring(2)) || fstMatch && isMatch(s.substring(1), p));
         } else {
