@@ -24,9 +24,12 @@ public class A147对链表进行插入排序 {
         myHead=head;
         while(cursor!=null){
             ListNode temp=cursor.next;
-            if(temp!=null&&temp.val<cursor.val){  //如果该结点的后一个结点比该节点小
-                cutLink(cursor);  //将后一个结点从链表中取出
-                insertNode(temp,head);  //将后一个结点插入到适合的位置
+            //如果该结点的后一个结点比该节点小
+            if(temp!=null&&temp.val<cursor.val){
+                //将后一个结点从链表中取出
+                cutLink(cursor);
+                //将后一个结点插入到适合的位置
+                insertNode(temp,head);
             }else{
                 cursor=cursor.next;
             }
