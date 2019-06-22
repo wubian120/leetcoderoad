@@ -66,6 +66,7 @@ public class A10正则表达式匹配self {
         }
         boolean firstMatch = (!s.isEmpty() && (p.charAt(0) == s.charAt(0) || p.charAt(0) == '.'));
 
+        //注意是 && , 这个地方错过2次
         if (p.length() >= 2 && p.charAt(1) == '*') {
             //两种情况均可， 第一种， 判断s 与 p.substring(2)后序子串是否匹配，
             //第二种 firstMatch 且 s.substring(1)与 p 是否匹配。
