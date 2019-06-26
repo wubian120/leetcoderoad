@@ -16,9 +16,11 @@ public class A141环形链表 {
         }
         ListNode fast = head;
         ListNode slow = head;
+        //注意条件
         while (fast != null && fast.next != null){
             slow = slow.next;
             fast = fast.next.next;
+
             if(slow == fast){
                 return true;
             }
