@@ -12,7 +12,10 @@ public class A10正则表达式匹配 {
             //
             return (isMatch(s,p.substring(2)) || fstMath&&isMatch(s.substring(1), p));
         }else {
-            return  fstMath && isMatch(s.substring(1),p.substring(1));
+            return
+
+
+                    fstMath && isMatch(s.substring(1),p.substring(1));
         }
     }
 

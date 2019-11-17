@@ -1,6 +1,6 @@
 package cn.bw.leetcode
 
-object A144二叉树的前序遍历 {
+object A144二叉树的前序遍历1 {
 
   class TreeNode(var _value: Int) {
     var value: Int = _value
