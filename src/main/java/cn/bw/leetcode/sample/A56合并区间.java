@@ -1,4 +1,4 @@
-package cn.bw.leetcode;
+package cn.bw.leetcode.sample;
 
 import java.util.ArrayList;
 import java.util.Arrays;
